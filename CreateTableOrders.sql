@@ -1,3 +1,12 @@
+create table netology.orders (
+        id int not null primary key auto_increment,
+        date date not null,
+        customer_id int not null,
+        product_name varchar(255) not null,
+        amount int not null,
+        foreign key (customer_id) references netology.customers (id)
+);
+
 insert into netology.orders
 values  (1, '2022-01-01', 3, 'Porsche Macan', 1),
         (2, '2022-05-21', 1, 'Porsche 911', 3),
